@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-openlineage" %}
-{% set version = "1.2.1" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-openlineage-{{ version }}.tar.gz
-  sha256: 492f503154480fef2e1523a7af8065b4ca3a8b806c88ffb00e3109b8d21a9068
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 8be9a24a12686aa7dffa1cd4bde183cd2f0ba4b552ebaf42b7146fe5e78c3e73
 
 build:
   noarch: python
@@ -16,8 +16,8 @@ build:
 
 requirements:
   host:
-    - python >=3.8
-    - setuptools >=67.2.0,<68.0.0
+    - python >=3.8,<4.dev0
+    - flit-core >=3.2,<4
     - pip
   run:
     - python >=3.8
@@ -30,19 +30,16 @@ requirements:
 test:
   imports:
     - airflow.providers.openlineage
-    - airflow.providers.openlineage.extractors
   commands:
     - pip check
   requires:
     - pip
 
 about:
-  home: https://airflow.apache.org/
-  summary: Provider for Apache Airflow. Implements apache-airflow-providers-openlineage package
+  home: https://github.com/apache/airflow/
+  summary: Provider package apache-airflow-providers-openlineage for Apache Airflow
   license: Apache-2.0
-  license_file:
-    - LICENSE
-    - NOTICE
+  license_file: airflow/providers/openlineage/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-openlineage/stable/index.html
   dev_url: https://github.com/apache/airflow/
