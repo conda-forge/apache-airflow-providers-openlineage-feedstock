@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-openlineage" %}
-{% set version = "1.4.0" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_openlineage-{{ version }}.tar.gz
-  sha256: 67a5127fa55d68b265af5be0edd3dda0bb79352c3209a90a739280ceac7f941a
+  sha256: 7e263c8817223e98d564d736b73cba786cfc811e214b5a4c5226be4a0bc5ce3d
 
 build:
   noarch: python
