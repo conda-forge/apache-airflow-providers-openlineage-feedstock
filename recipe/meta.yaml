@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-openlineage" %}
-{% set version = "1.8.0" %}
+{% set version = "1.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_openlineage-{{ version }}.tar.gz
-  sha256: ef20cd74cfbaa0de91044d8076e3dd3399c817f4b1a2caae4866b52dfeb8bb76
+  sha256: fd295496c8645ebbd3008797a1790b979d4508d8bc443575b00b6c235b7f6f8d
 
 build:
   noarch: python
@@ -24,8 +24,8 @@ requirements:
     - apache-airflow-providers-common-sql >=1.6.0
     - apache-airflow >=2.7.0
     - attrs >=22.2
-    - openlineage-integration-common >=0.28.0
-    - openlineage-python >=0.28.0
+    - openlineage-integration-common >=1.16.0
+    - openlineage-python >=1.16.0
 
 test:
   imports:
