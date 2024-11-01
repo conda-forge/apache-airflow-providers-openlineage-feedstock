@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_openlineage-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_openlineage-{{ version }}.tar.gz
   sha256: e131645adb452c27a0ec82431fa4085c4cd0669a56fc02cb3244db38c75d945a
 
 build:
