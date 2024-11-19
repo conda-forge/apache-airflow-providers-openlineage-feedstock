@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-openlineage" %}
-{% set version = "1.13.0" %}
+{% set version = "1.14.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_openlineage-{{ version }}.tar.gz
-  sha256: e131645adb452c27a0ec82431fa4085c4cd0669a56fc02cb3244db38c75d945a
+  sha256: 1884bfcb705c1bff278cae418a13692d27882c64b716e79e3aae8c34e749ac20
 
 build:
   noarch: python
@@ -16,17 +16,17 @@ build:
 
 requirements:
   host:
-    - python >=3.9,<4.dev0
-    - flit-core >=3.2,<4
+    - python {{ python_min }}
+    - flit-core ==3.10.1
     - pip
   run:
-    - python >=3.9,<4.dev0
+    - python >={{ python_min }}
     - apache-airflow-providers-common-compat >=1.2.1
-    - apache-airflow-providers-common-sql >=1.6.0
+    - apache-airflow-providers-common-sql >=1.20.0
     - apache-airflow >=2.8.0
     - attrs >=22.2
-    - openlineage-integration-common >=1.22.0
-    - openlineage-python >=1.22.0
+    - openlineage-integration-common >=1.24.2
+    - openlineage-python >=1.24.2
 
 test:
   imports:
@@ -34,6 +34,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
