@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-openlineage
-  version: "2.20.3"
+  version: "2.21.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_openlineage-${{ version }}.tar.gz
-  sha256: 71736d8234dd46f8b29b400246e8d5b1917e4948bc202d02cf242cf56e8adc34
+  sha256: 915a017dcd607b8c25a44e228360da9d69eb9930ea68c82432386c425bb69770
 
 build:
   noarch: python
