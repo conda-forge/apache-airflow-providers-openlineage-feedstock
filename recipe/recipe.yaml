@@ -19,15 +19,15 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==4.1.0
+    - flit-core ==4.2.0
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-sql >=1.32.0
     - apache-airflow-providers-common-compat >=1.15.0
     - attrs >=22.2
-    - openlineage-integration-common >=1.52.0
-    - openlineage-python >=1.52.0
+    - openlineage-integration-common >=1.55.0
+    - openlineage-python >=1.55.0
 
 tests:
   - python:
